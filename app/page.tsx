@@ -57,7 +57,14 @@ export default async function Page() {
     <main>
       <header>
         <h1>{process.env.DASHBOARD_TITLE || "KPI Dashboard"}</h1>
-        <span className="updated">Updated {updated} PT</span>
+        <div className="header-right">
+          <span className="updated">Updated {updated} PT</span>
+          {process.env.DASHBOARD_PASSWORD ? (
+            <form method="POST" action="/api/logout">
+              <button type="submit" className="signout">Sign out</button>
+            </form>
+          ) : null}
+        </div>
       </header>
 
       {visible.length === 0 ? (

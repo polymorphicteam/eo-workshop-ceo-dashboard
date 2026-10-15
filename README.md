@@ -44,7 +44,7 @@ Every later `git push` redeploys automatically.
 
 ## Password
 
-Set `DASHBOARD_PASSWORD` in `.env.local` and in Vercel's Environment Variables. The browser prompts for it (any username, that password). Leave it unset on localhost to skip the prompt. See `middleware.ts`.
+Set `DASHBOARD_PASSWORD` in `.env.local` and in Vercel's Environment Variables. Visitors get a login page at `/login` and stay signed in for 30 days; changing the password signs everyone out. Leave it unset on localhost to skip the login. See `lib/auth.ts` and `middleware.ts`.
 
 ## Secrets
 

@@ -13,7 +13,7 @@ confirm numbers before trusting them.
 - `lib/metrics/index.ts` — the registry. **The order of this array is the order on the page.**
 - `scripts/check-metrics.ts` — `npm run check [filter]` prints every configured metric in the terminal. Use it to verify a number before wiring a tile.
 - `data/` — CSV exports for systems without an API. Only `sample-metrics.csv` is tracked in git.
-- `middleware.ts` — HTTP Basic Auth for the whole site when `DASHBOARD_PASSWORD` is set. Don't remove it; if the user wants no password, they unset the variable.
+- `lib/auth.ts`, `middleware.ts`, `app/login/`, `app/api/login/`, `app/api/logout/` — the password login. When `DASHBOARD_PASSWORD` is set, the middleware redirects to `/login`; a correct password sets a signed cookie for 30 days. Don't remove this; if the user wants no password, they unset the variable.
 - `.env.example` — the list of env var names. Real values live in `.env.local` (gitignored) and on Vercel.
 
 ## Adding a metric (the standard loop)
