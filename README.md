@@ -42,6 +42,10 @@ gh repo create my-dashboard --private --source=. --remote=origin --push
 Then on vercel.com: Add New → Project → import the repo → add your env vars → Deploy.
 Every later `git push` redeploys automatically.
 
+## Password
+
+Set `DASHBOARD_PASSWORD` in `.env.local` and in Vercel's Environment Variables. The browser prompts for it (any username, that password). Leave it unset on localhost to skip the prompt. See `middleware.ts`.
+
 ## Secrets
 
 `.env.local` and everything in `data/` except the sample CSV are gitignored. Keys go in `.env.local` locally and in Vercel's Environment Variables in production. Never paste a key into a chat.

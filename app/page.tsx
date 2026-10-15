@@ -108,6 +108,12 @@ export default async function Page() {
       )}
 
       <footer>
+        {!process.env.DASHBOARD_PASSWORD && (
+          <p>
+            This dashboard has no password. Set <code>DASHBOARD_PASSWORD</code> in <code>.env.local</code> and on
+            Vercel to require one.
+          </p>
+        )}
         Numbers are fetched live on every page load. To add a tile, create a file in <code>lib/metrics/</code> and
         register it in <code>lib/metrics/index.ts</code>.
       </footer>
