@@ -1,5 +1,4 @@
 import type { Metric } from "./types";
-import { sampleOpenTickets, sampleMrr, sampleLeads } from "./sample";
 import { csvOpenTickets } from "./csv-example";
 import { hubspotDealsThisMonth, hubspotOpenDeals, hubspotContactsThisMonth } from "./hubspot";
 import { stripeMrr, stripeRevenueThisMonth } from "./stripe";
@@ -18,10 +17,7 @@ import { qboOpenInvoices, qboInvoicedThisMonth } from "./quickbooks";
  * delete them to keep the page clean.
  */
 export const metrics: Metric[] = [
-  // Sample tiles — replace or remove as you connect real systems.
-  sampleOpenTickets,
-  sampleMrr,
-  sampleLeads,
+  // CSV example — swap for your own export, or remove once a real system is connected.
   csvOpenTickets,
 
   // Real connectors — each appears only once its env vars are set.
