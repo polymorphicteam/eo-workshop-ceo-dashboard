@@ -1,0 +1,11 @@
+Ticket ID,Subject,Status,Created,Priority
+1001,Login not working,Open,2026-10-01,High
+1002,Invoice question,Closed,2026-10-02,Low
+1003,Feature request: dark mode,Open,2026-10-03,Low
+1004,Password reset loop,Open,2026-10-05,High
+1005,"Billing, duplicate charge",Closed,2026-10-06,High
+1006,Export to CSV fails,Open,2026-10-08,Medium
+1007,Onboarding call request,Closed,2026-10-09,Low
+1008,API rate limit hit,Open,2026-10-11,Medium
+1009,Mobile app crash,Open,2026-10-12,High
+1010,Change billing email,Closed,2026-10-13,Low
